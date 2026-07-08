@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unique Template — Premium Digital Design Templates</title>
+<style>
+  @font-face{
+    font-family:'Lora'; src:local('Lora');
+  }
+  :root{
+    --plum:#2C1B4A;
+    --plum-deep:#1D1130;
+    --gold:#C9A24C;
+    --gold-light:#E4C878;
+    --ivory:#FAF6F0;
+    --paper:#FFFFFF;
+    --coral:#E4664A;
+    --coral-deep:#C94E34;
+    --muted:#6B5C82;
+    --line: rgba(44,27,74,0.14);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    font-family:'Poppins', 'Segoe UI', sans-serif;
+    background:var(--ivory);
+    color:var(--plum-deep);
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:30px;
+  }
+  h1,h2,h3,.serif{ font-family:'Lora', serif; }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:40;
+    background:var(--plum);
+    padding:14px 16px;
+  }
+  .header-row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .logo{ display:flex; align-items:center; gap:9px; }
+  .logo-mark{ width:30px; height:30px; flex-shrink:0; }
+  .logo-text{ color:var(--ivory); font-size:17px; letter-spacing:1.2px; font-weight:700; font-family:'Lora'; }
+  .logo-text span{ color:var(--gold-light); }
+  .admin-link{
+    font-size:11px; color:rgba(250,246,240,0.65); background:none; border:1px solid rgba(250,246,240,0.3);
+    padding:6px 12px; border-radius:20px; cursor:pointer; letter-spacing:0.4px;
+  }
+  .verified-badge{
+    font-size:10.5px; color:var(--gold-light); background:rgba(201,162,76,0.15);
+    border:1px solid rgba(201,162,76,0.4); padding:5px 11px; border-radius:20px;
+    letter-spacing:0.3px; font-weight:600;
+  }
+  .tagline-bar{
+    text-align:center; font-size:11px; color:var(--gold-light); letter-spacing:1.5px;
+    margin-top:8px; text-transform:uppercase; font-weight:500;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:40px 20px 30px; text-align:center; position:relative; overflow:hidden;
+    background:linear-gradient(180deg, var(--plum) 0%, var(--plum) 55%, var(--ivory) 55%);
+  }
+  .hero-inner{
+    background:var(--paper); border-radius:16px; padding:34px 22px;
+    box-shadow:0 20px 50px rgba(44,27,74,0.18);
+    max-width:480px; margin:0 auto; position:relative;
+  }
+  .hero-eyebrow{
+    font-size:11px; letter-spacing:2.5px; color:var(--coral); text-transform:uppercase; font-weight:600;
+  }
+  .hero h1{
+    font-size:26px; line-height:1.25; margin:10px 0 10px; color:var(--plum-deep); font-weight:600;
+  }
+  .hero h1 em{ font-style:italic; color:var(--gold); }
+  .hero p{ font-size:13px; color:var(--muted); line-height:1.6; }
+  .hero-stats{
+    display:flex; justify-content:center; gap:24px; margin-top:18px; padding-top:16px;
+    border-top:1px solid var(--line);
+  }
+  .hstat{ text-align:center; }
+  .hstat b{ display:block; font-family:'Lora'; font-size:18px; color:var(--plum); }
+  .hstat span{ font-size:10px; color:var(--muted); letter-spacing:0.4px; }
+
+  /* ---------- CATALOG ---------- */
+  .section-title{
+    padding:26px 16px 12px; display:flex; align-items:baseline; justify-content:space-between;
+  }
+  .section-title h2{ font-size:18px; font-weight:600; color:var(--plum-deep); }
+  .section-title span{ font-size:11px; color:var(--muted); }
+
+  .filter-row{
+    display:flex; gap:8px; padding:0 16px 14px; overflow-x:auto;
+  }
+  .filter-chip{
+    flex-shrink:0; padding:6px 14px; border-radius:16px; border:1px solid var(--line);
+    background:var(--paper); font-size:11.5px; color:var(--muted); cursor:pointer; white-space:nowrap;
+  }
+  .filter-chip.active{ background:var(--plum); color:var(--ivory); border-color:var(--plum); }
+
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; padding:0 14px; }
+  .card{
+    background:var(--paper); border-radius:12px; overflow:hidden; border:1px solid var(--line);
+    display:flex; flex-direction:column;
+  }
+  .card-img{
+    aspect-ratio:1/1; background:#F1ECE4; position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .card-img img{ width:100%; height:100%; object-fit:cover; }
+  .view-hint{
+    position:absolute; bottom:0; left:0; right:0; background:rgba(29,17,48,0.75); color:#fff;
+    font-size:9.5px; text-align:center; padding:4px 0; letter-spacing:0.3px;
+  }
+  .card-id{
+    position:absolute; top:8px; left:8px; background:rgba(44,27,74,0.85); color:var(--gold-light);
+    font-size:9.5px; padding:3px 7px; border-radius:3px; letter-spacing:0.5px; font-weight:600;
+  }
+  .card-body{ padding:10px 11px 12px; display:flex; flex-direction:column; gap:5px; }
+  .card-body h3{ font-size:12.5px; font-weight:500; line-height:1.3; min-height:32px; font-family:'Poppins'; color:var(--plum-deep); }
+  .rating-row{ display:flex; align-items:center; gap:5px; }
+  .stars{ color:var(--gold); font-size:12px; letter-spacing:1px; }
+  .rating-num{ font-size:10.5px; color:var(--muted); }
+  .sold-txt{ font-size:10px; color:var(--muted); }
+  .price-row{ display:flex; align-items:baseline; justify-content:space-between; margin-top:2px;}
+  .price{ font-family:'Lora'; font-weight:700; color:var(--coral); font-size:16px; }
+  .buy-btn{
+    margin-top:6px; width:100%; padding:9px; border:none; border-radius:7px;
+    background:var(--plum); color:var(--ivory); font-weight:600; font-size:12px; cursor:pointer;
+    letter-spacing:0.3px;
+  }
+  .buy-btn:active{ background:var(--plum-deep); }
+  .empty-state{
+    grid-column:1/-1; text-align:center; padding:50px 20px; color:var(--muted); font-size:13px;
+  }
+
+  /* ---------- HOW IT WORKS ---------- */
+  .how{ padding:30px 16px; }
+  .how-steps{ display:flex; flex-direction:column; gap:14px; margin-top:14px; }
+  .how-step{ display:flex; gap:12px; align-items:flex-start; background:var(--paper); padding:14px; border-radius:10px; border:1px solid var(--line);}
+  .how-num{
+    width:26px; height:26px; border-radius:50%; background:var(--gold); color:var(--plum-deep);
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:12px; flex-shrink:0;
+  }
+  .how-step h4{ font-size:13px; margin-bottom:3px; }
+  .how-step p{ font-size:11.5px; color:var(--muted); line-height:1.5; }
+
+  footer{ text-align:center; padding:30px 16px 10px; font-size:11px; color:var(--muted); line-height:1.7; }
+
+  /* ---------- BUY MODAL ---------- */
+  .modal-overlay{
+    position:fixed; inset:0; background:rgba(29,17,48,0.6); z-index:70;
+    display:flex; align-items:flex-end; justify-content:center;
+    opacity:0; pointer-events:none; transition:opacity 0.25s ease;
+  }
+  .modal-overlay.show{ opacity:1; pointer-events:all; }
+  .modal{
+    background:var(--ivory); width:100%; max-width:460px; max-height:92vh; overflow-y:auto;
+    border-radius:16px 16px 0 0; transform:translateY(40px); transition:transform 0.28s cubic-bezier(.4,0,.2,1);
+  }
+  .modal-overlay.show .modal{ transform:translateY(0); }
+  .modal-head{
+    padding:16px; display:flex; align-items:center; justify-content:space-between; background:var(--plum);
+    position:sticky; top:0; z-index:2;
+  }
+  .modal-head h3{ color:var(--ivory); font-size:15px; }
+  .close-x{ background:none; border:none; color:var(--ivory); font-size:22px; cursor:pointer; line-height:1; }
+  .modal-body{ padding:18px 16px; display:flex; flex-direction:column; gap:16px; }
+
+  .buy-summary{ display:flex; gap:12px; align-items:center; background:var(--paper); padding:10px; border-radius:10px; border:1px solid var(--line);}
+  .buy-summary img{ width:60px; height:60px; object-fit:cover; border-radius:6px; }
+  .buy-summary h4{ font-size:12.5px; margin-bottom:3px; }
+  .buy-summary .price{ font-size:15px; }
+
+  .gcash-box{
+    background:var(--paper); border:1.5px dashed var(--gold); border-radius:10px; padding:16px; text-align:center;
+  }
+  .gcash-box .gtitle{ font-size:11px; letter-spacing:1.5px; color:var(--muted); text-transform:uppercase; margin-bottom:8px; font-weight:600; }
+  #qrCanvas{ margin:8px auto 10px; display:block; border-radius:8px; }
+  .gcash-number{
+    font-family:'Lora'; font-size:21px; font-weight:700; color:var(--plum); letter-spacing:1px; margin:4px 0;
+  }
+  .gcash-name{ font-size:11.5px; color:var(--muted); margin-bottom:10px; }
+  .copy-btn{
+    background:var(--gold); color:var(--plum-deep); border:none; padding:7px 18px; border-radius:16px;
+    font-size:11.5px; font-weight:600; cursor:pointer;
+  }
+
+  .field label{
+    display:block; font-size:10.5px; font-weight:600; color:var(--plum); text-transform:uppercase;
+    letter-spacing:0.4px; margin-bottom:5px;
+  }
+  .field input{
+    width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:7px; font-size:13px;
+    background:#fff; outline:none; font-family:'Poppins';
+  }
+  .field input:focus{ border-color:var(--gold); }
+  .file-field{
+    border:1.5px dashed var(--line); border-radius:8px; padding:14px; text-align:center; font-size:11.5px;
+    color:var(--muted); cursor:pointer; background:#fff;
+  }
+  .submit-order-btn{
+    width:100%; padding:13px; border:none; border-radius:8px; background:var(--coral); color:#fff;
+    font-weight:600; font-size:13.5px; cursor:pointer;
+  }
+  .order-err{ font-size:11px; color:var(--coral-deep); display:none; }
+  .order-err.show{ display:block; }
+
+  .success-box{ text-align:center; padding:20px 10px; }
+  .success-box .check{
+    width:56px; height:56px; border-radius:50%; background:var(--plum); color:var(--gold-light);
+    display:flex; align-items:center; justify-content:center; margin:0 auto 14px; font-size:26px;
+  }
+  .success-box h4{ font-size:16px; margin-bottom:8px; color:var(--plum-deep); }
+  .success-box p{ font-size:12.5px; color:var(--muted); line-height:1.6; margin-bottom:16px; }
+  .order-ref{ font-family:'Lora'; font-size:13px; background:var(--paper); border-radius:6px; padding:8px; border:1px solid var(--line); }
+
+  /* ---------- ADMIN PANEL ---------- */
+  .admin-overlay{
+    position:fixed; inset:0; background:rgba(29,17,48,0.65); z-index:80; display:flex;
+    align-items:center; justify-content:center; padding:16px;
+    opacity:0; pointer-events:none; transition:opacity 0.2s ease;
+  }
+  .admin-overlay.show{ opacity:1; pointer-events:all; }
+  .admin-lock{
+    background:var(--paper); border-radius:14px; padding:26px 22px; width:100%; max-width:320px; text-align:center;
+  }
+  .admin-lock h3{ font-size:16px; margin-bottom:6px; }
+  .admin-lock p{ font-size:11.5px; color:var(--muted); margin-bottom:14px; }
+  .admin-lock input{
+    width:100%; padding:11px; border:1px solid var(--line); border-radius:8px; text-align:center;
+    font-size:16px; letter-spacing:4px; margin-bottom:10px; font-family:'Lora';
+  }
+  .admin-lock button{
+    width:100%; padding:11px; border:none; border-radius:8px; background:var(--plum); color:var(--ivory);
+    font-weight:600; cursor:pointer; font-size:13px;
+  }
+  .admin-lock .hint{ font-size:10px; color:rgba(107,92,130,0.6); margin-top:10px; }
+
+  .admin-panel{
+    position:fixed; inset:0; background:var(--ivory); z-index:90; overflow-y:auto;
+    display:none;
+  }
+  .admin-panel.show{ display:block; }
+  .admin-top{
+    background:var(--plum); color:var(--ivory); padding:16px; display:flex; align-items:center;
+    justify-content:space-between; position:sticky; top:0; z-index:2;
+  }
+  .admin-top h3{ font-size:15px; }
+  .admin-tabs{ display:flex; gap:8px; padding:14px 16px 0; }
+  .admin-tab{
+    padding:8px 16px; border-radius:8px; font-size:12px; font-weight:600; cursor:pointer;
+    background:var(--paper); color:var(--muted); border:1px solid var(--line);
+  }
+  .admin-tab.active{ background:var(--plum); color:var(--ivory); border-color:var(--plum); }
+  .admin-content{ padding:16px; }
+  .admin-section{ display:none; }
+  .admin-section.active{ display:block; }
+
+  .upload-form{ background:var(--paper); border-radius:12px; padding:16px; border:1px solid var(--line); margin-bottom:16px; }
+  .upload-form h4{ font-size:14px; margin-bottom:12px; }
+  .form-grid{ display:flex; flex-direction:column; gap:12px; }
+  .auto-id-preview{
+    font-family:'Lora'; font-size:12px; background:var(--ivory); padding:8px 10px; border-radius:6px;
+    color:var(--muted); border:1px dashed var(--line);
+  }
+  select.field-input, .field-input{
+    width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:7px; font-size:13px; font-family:'Poppins';
+  }
+  .img-preview{ width:80px; height:80px; border-radius:8px; object-fit:cover; margin-top:8px; display:none; }
+  .add-btn{
+    width:100%; padding:12px; border:none; border-radius:8px; background:var(--coral); color:#fff;
+    font-weight:600; font-size:13px; cursor:pointer; margin-top:4px;
+  }
+
+  .admin-item{
+    display:flex; gap:10px; background:var(--paper); border-radius:10px; padding:10px; margin-bottom:8px;
+    border:1px solid var(--line); align-items:center;
+  }
+  .admin-item img{ width:48px; height:48px; border-radius:6px; object-fit:cover; }
+  .admin-item-info{ flex:1; }
+  .admin-item-info h5{ font-size:12px; }
+  .admin-item-info span{ font-size:10.5px; color:var(--muted); }
+  .del-btn{ background:none; border:none; color:var(--coral); font-size:11px; cursor:pointer; text-decoration:underline; }
+
+  .order-card{
+    background:var(--paper); border-radius:10px; padding:12px; margin-bottom:10px; border:1px solid var(--line);
+  }
+  .order-card .oc-top{ display:flex; justify-content:space-between; margin-bottom:6px; }
+  .order-card .oc-id{ font-family:'Lora'; font-size:12px; font-weight:700; }
+  .order-status{ font-size:9.5px; padding:2px 8px; border-radius:10px; font-weight:600; letter-spacing:0.3px; text-transform:uppercase; }
+  .order-status.pending{ background:#FCE9C6; color:#8A6416; }
+  .order-status.approved{ background:#D6E8D6; color:#2F5C2F; }
+  .order-card p{ font-size:11.5px; color:var(--muted); margin-bottom:2px; }
+  .order-card .oc-actions{ display:flex; gap:8px; margin-top:10px; }
+  .oc-btn{ flex:1; padding:8px; border-radius:6px; border:none; font-size:11px; font-weight:600; cursor:pointer; }
+  .oc-btn.approve{ background:var(--plum); color:var(--ivory); }
+  .oc-btn.link{ background:var(--ivory); color:var(--plum); border:1px solid var(--line); }
+  .empty-admin{ text-align:center; padding:30px; color:var(--muted); font-size:12.5px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <div class="logo" id="logoTap">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+        <polygon points="20,3 34,14 28,37 12,37 6,14" fill="#C9A24C"/>
+        <polygon points="20,3 34,14 20,19" fill="#E4C878"/>
+        <polygon points="6,14 20,19 12,37" fill="#9A7B36"/>
+        <polygon points="34,14 28,37 20,19" fill="#B08D3F"/>
+      </svg>
+      <div class="logo-text">UNIQUE<span>TEMPLATE</span></div>
+    </div>
+    <div class="verified-badge" title="Verified Seller">✓ Verified</div>
+  </div>
+  <div class="tagline-bar">Premium Canva Design Templates</div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Digital Templates Shop</div>
+    <h1>Design that makes<br>your brand look <em>unique</em>.</h1>
+    <p>Ready-to-edit Canva templates for creators and small businesses. Buy once, edit anytime, launch your content in minutes.</p>
+    <div class="hero-stats">
+      <div class="hstat"><b id="statCount">0</b><span>TEMPLATES</span></div>
+      <div class="hstat"><b id="statSold">0</b><span>SOLD</span></div>
+      <div class="hstat"><b>GCash</b><span>PAYMENT</span></div>
+    </div>
+    <button onclick="openCheckOrder()" style="margin-top:16px; width:100%; padding:10px; border:1px solid var(--line); border-radius:20px; background:none; color:var(--plum); font-size:11.5px; font-weight:600; cursor:pointer;">📦 Check My Order Status</button>
+  </div>
+</section>
+
+<div class="section-title">
+  <h2>Browse Templates</h2>
+  <span id="catalogCount">0 items</span>
+</div>
+<div class="filter-row" id="filterRow"></div>
+<div class="grid" id="productGrid"></div>
+
+<div class="how">
+  <div class="section-title" style="padding:0 0 0;"><h2>How It Works</h2></div>
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="how-num">1</div>
+      <div><h4>Pick a template</h4><p>Browse the shop and choose the design that fits your brand.</p></div>
+    </div>
+    <div class="how-step">
+      <div class="how-num">2</div>
+      <div><h4>Pay via GCash</h4><p>Scan the QR code and send the exact amount, then upload your payment screenshot.</p></div>
+    </div>
+    <div class="how-step">
+      <div class="how-num">3</div>
+      <div><h4>Get your link</h4><p>Once payment is verified, you'll receive the Canva template link to start editing.</p></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  UNIQUE TEMPLATE · Digital Design Shop<br>
+  <span style="color:var(--gold); font-weight:600;">✓ Verified Seller · Est. 2026</span><br>
+  Orders are manually verified via GCash payment screenshot.<br>
+  All templates are for personal & small business use.
+</footer>
+
+<!-- BUY MODAL -->
+<div class="modal-overlay" id="buyOverlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="buyModalTitle">Buy Template</h3>
+      <button class="close-x" id="closeBuy">&times;</button>
+    </div>
+    <div class="modal-body" id="buyModalBody"></div>
+  </div>
+</div>
+
+<!-- ADMIN LOCK -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-lock">
+    <h3>Admin Access</h3>
+    <p>Enter your passcode to manage templates & orders.</p>
+    <input type="password" id="adminPass" placeholder="••••••" maxlength="20">
+    <button id="adminUnlock">Unlock</button>
+    <button style="background:none;border:none;color:var(--muted);font-size:11px;margin-top:12px;cursor:pointer;text-decoration:underline;" id="adminCancel">Cancel</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-panel" id="adminPanel">
+  <div class="admin-top">
+    <h3>Seller Dashboard</h3>
+    <button class="close-x" id="closeAdmin">&times;</button>
+  </div>
+  <div class="admin-tabs">
+    <div class="admin-tab active" data-tab="upload">Upload</div>
+    <div class="admin-tab" data-tab="manage">My Templates</div>
+    <div class="admin-tab" data-tab="orders">Orders</div>
+    <div class="admin-tab" data-tab="payment">Payment</div>
+  </div>
+  <div class="admin-content">
+    <div id="firebaseWarning" style="display:none; background:#FCE9C6; color:#8A6416; padding:12px 14px; border-radius:8px; font-size:11.5px; margin-bottom:14px; line-height:1.5;">
+      ⚠️ <b>Database is not connected yet.</b> Anything you upload now will NOT be saved permanently.
+      <div id="dbErrorDetail" style="margin-top:6px; font-family:monospace; font-size:10.5px; word-break:break-all;"></div>
+    </div>
+    <div class="admin-section" id="tab-payment">
+      <div class="upload-form">
+        <h4>GCash QR Code</h4>
+        <p style="font-size:11.5px; color:var(--muted); margin-bottom:12px; line-height:1.5;">
+          Upload your real GCash "Receive Money" QR code (from your GCash app: Profile → QR Code → Save). This is what customers will scan to pay you — your number and name stay private.
+        </p>
+        <div class="form-grid">
+          <div class="field">
+            <label>QR Code Image</label>
+            <label class="file-field" for="qrImage">Tap to upload your GCash QR screenshot</label>
+            <input type="file" id="qrImage" accept="image/*" style="display:none;">
+            <img class="img-preview" id="qrImgPreview" style="width:140px; height:140px;">
+          </div>
+          <button class="add-btn" id="saveQrBtn">Save QR Code</button>
+        </div>
+      </div>
+    </div>
+    <div class="admin-section active" id="tab-upload">
+      <div class="upload-form">
+        <h4>Add New Template</h4>
+        <div class="form-grid">
+          <div class="field">
+            <label>Auto-generated Product Code</label>
+            <div class="auto-id-preview" id="autoIdPreview">UT-001</div>
+          </div>
+          <div class="field">
+            <label>Template Title</label>
+            <input type="text" class="field-input" id="newTitle" placeholder="e.g. Aesthetic Instagram Carousel Pack">
+          </div>
+          <div class="field">
+            <label>Category</label>
+            <select class="field-input" id="newCategory">
+              <option>Instagram Post</option>
+              <option>Instagram Story</option>
+              <option>Resume/CV</option>
+              <option>Invitation</option>
+              <option>Presentation</option>
+              <option>Planner</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Pricing</label>
+            <select class="field-input" id="newPricingType">
+              <option value="paid">Paid Template</option>
+              <option value="free">Free Template</option>
+            </select>
+          </div>
+          <div class="field" id="priceFieldWrap">
+            <label>Price (₱)</label>
+            <input type="number" class="field-input" id="newPrice" placeholder="e.g. 250">
+          </div>
+          <div class="field">
+            <label>Preview Image</label>
+            <label class="file-field" for="newImage">Tap to upload preview photo (JPG/PNG)</label>
+            <input type="file" id="newImage" accept="image/*" style="display:none;">
+            <img class="img-preview" id="imgPreview">
+          </div>
+          <div class="field">
+            <label>Delivery Link (Canva / Google Drive share link)</label>
+            <input type="text" class="field-input" id="newLink" placeholder="https://www.canva.com/design/...">
+          </div>
+          <button class="add-btn" id="addTemplateBtn">+ Add Template to Shop</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="admin-section" id="tab-manage">
+      <div id="manageList"></div>
+    </div>
+
+    <div class="admin-section" id="tab-orders">
+      <button class="oc-btn link" style="width:100%; margin-bottom:12px;" id="enableNotifBtn">🔔 Enable Order Notifications on This Phone</button>
+      <div id="ordersList"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+// ============================================
+// ONESIGNAL SETUP — paste your own App ID here!
+// Get this from: OneSignal Dashboard → Settings → Keys & IDs
+// ============================================
+const ONESIGNAL_APP_ID = "PASTE_YOUR_ONESIGNAL_APP_ID_HERE";
+window.OneSignalDeferred = window.OneSignalDeferred || [];
+OneSignalDeferred.push(async function(OneSignal){
+  try{
+    await OneSignal.init({ appId: ONESIGNAL_APP_ID });
+  } catch(e){ console.error('OneSignal not configured yet:', e); }
+});
+</script>
+<script>
+// ============================================
+// SUPABASE SETUP — paste your own project details here!
+// Get this from: Supabase Dashboard → Project Settings → API
+// ============================================
+const SUPABASE_URL = "https://htzvrgkwvnvifqeqvzao.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_2xenJ2eF6-46bDSk2VDPDg_RKmLEFTX";
+function describeError(e){
+  if(!e) return 'Unknown error';
+  if(typeof e === 'string') return e;
+  const parts = [];
+  if(e.message) parts.push(e.message);
+  if(e.details) parts.push(e.details);
+  if(e.hint) parts.push(e.hint);
+  if(e.code) parts.push('code: ' + e.code);
+  if(parts.length) return parts.join(' | ');
+  try{ return JSON.stringify(e); } catch(_){ return String(e); }
+}
+
+let sb = null;
+let dbReady = false;
+let dbSetupError = '';
+try{
+  if(typeof supabase === 'undefined'){
+    throw new Error('Supabase library did not load (check internet connection or ad-blocker).');
+  }
+  sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  dbReady = true;
+} catch(e){
+  dbSetupError = describeError(e);
+  console.error('Supabase not configured yet:', e);
+}
+
+const ADMIN_PASSCODE = "JD-Unique#2637x"; // Jehu: this is your private seller passcode — do not share it
+let gcashQrImage = null; // your uploaded GCash QR screenshot (private, not shown as text)
+
+let templates = [];
+let orders = [];
+
+// ---------- STORAGE (Supabase) ----------
+function dbRowToOrder(row){
+  return {
+    orderId: row.order_id, templateId: row.template_id, templateName: row.template_name,
+    price: row.price, buyerName: row.buyer_name, proofImage: row.proof_image,
+    status: row.status, date: row.created_at ? new Date(row.created_at).toLocaleString('en-PH') : ''
+  };
+}
+async function loadData(){
+  if(!dbReady){
+    console.warn('Supabase not set up yet — shop data will not load or save.');
+    renderAll();
+    return;
+  }
+  try{
+    const { data: sdata, error: sErr } = await sb.from('shop_data').select('key,value').in('key', ['templates','settings']);
+    if(sErr) throw sErr;
+    const map = {};
+    (sdata||[]).forEach(row => { map[row.key] = row.value; });
+    templates = map.templates || [];
+    gcashQrImage = (map.settings && map.settings.gcashQr) || null;
+
+    const { data: odata, error: oErr } = await sb.from('orders').select('*').order('created_at', { ascending:false });
+    if(oErr) throw oErr;
+    orders = (odata||[]).map(dbRowToOrder);
+  } catch(e){
+    console.error(e);
+    dbSetupError = describeError(e);
+    dbReady = false;
+    templates = []; orders = []; gcashQrImage = null;
+  }
+  renderAll();
+}
+async function saveTemplates(){
+  if(!dbReady) { alert('⚠️ Supabase is not set up yet. Your changes will not be saved permanently.'); return; }
+  await sb.from('shop_data').upsert({ key:'templates', value: templates });
+}
+async function insertOrder(order){
+  if(!dbReady) { alert('⚠️ Supabase is not set up yet. Your order will not be saved permanently.'); return; }
+  await sb.from('orders').insert({
+    order_id: order.orderId, template_id: order.templateId, template_name: order.templateName,
+    price: order.price, buyer_name: order.buyerName, proof_image: order.proofImage,
+    status: order.status
+  });
+}
+async function updateOrderStatus(orderId, status){
+  if(!dbReady) { alert('⚠️ Supabase is not set up yet.'); return; }
+  await sb.from('orders').update({ status }).eq('order_id', orderId);
+}
+
+function peso(n){ return '₱' + Number(n).toLocaleString('en-PH'); }
+function avgRating(t){
+  if(!t.customerRatings || t.customerRatings.length===0) return null;
+  const sum = t.customerRatings.reduce((a,b)=>a+b,0);
+  return sum / t.customerRatings.length;
+}
+function starsHtml(rating){
+  const full = Math.round(rating);
+  return '★'.repeat(full) + '☆'.repeat(5-full);
+}
+
+// ---------- RENDER CATALOG ----------
+let activeFilter = 'All';
+function renderAll(){
+  renderStats();
+  renderFilters();
+  renderGrid();
+  renderManageList();
+  renderOrdersList();
+}
+
+function renderStats(){
+  document.getElementById('statCount').textContent = templates.length;
+  document.getElementById('statSold').textContent = templates.reduce((s,t)=>s+(t.sold||0),0);
+}
+
+function renderFilters(){
+  const cats = ['All', 'Free', ...new Set(templates.map(t=>t.category))];
+  document.getElementById('filterRow').innerHTML = cats.map(c=>`
+    <div class="filter-chip ${c===activeFilter?'active':''}" onclick="setFilter('${c}')">${c}</div>
+  `).join('');
+}
+function setFilter(c){ activeFilter = c; renderAll(); }
+
+function renderGrid(){
+  const grid = document.getElementById('productGrid');
+  let list;
+  if(activeFilter === 'All') list = templates;
+  else if(activeFilter === 'Free') list = templates.filter(t=>t.price===0);
+  else list = templates.filter(t=>t.category===activeFilter);
+  document.getElementById('catalogCount').textContent = list.length + ' items';
+  if(list.length === 0){
+    grid.innerHTML = `<div class="empty-state">No templates yet. Go to Admin → Upload to add your first one!</div>`;
+    return;
+  }
+  grid.innerHTML = list.map(t => {
+    const avg = avgRating(t);
+    const ratingCount = t.customerRatings ? t.customerRatings.length : 0;
+    return `
+    <div class="card">
+      <div class="card-img" onclick="openPreview('${t.id}')">
+        <span class="card-id">${t.id}</span>
+        <img src="${t.image}" alt="${t.title}">
+        <div class="view-hint">🔍 Tap to view</div>
+      </div>
+      <div class="card-body">
+        <h3>${t.title}</h3>
+        <div class="rating-row" onclick="openRateWidget('${t.id}')">
+          <span class="stars">${avg ? starsHtml(avg) : '☆☆☆☆☆'}</span>
+          <span class="rating-num">${avg ? avg.toFixed(1) + ' (' + ratingCount + ')' : 'Rate this'}</span>
+        </div>
+        <div class="sold-txt">${t.sold||0} ${t.price===0?'downloads':'sold'} · ${t.category}</div>
+        <div class="price-row"><span class="price" ${t.price===0?'style="color:#2F5C2F;"':''}>${t.price===0?'FREE':peso(t.price)}</span></div>
+        <button class="buy-btn" onclick="openBuyModal('${t.id}')">${t.price===0?'Get Free Template':'Buy with GCash'}</button>
+      </div>
+    </div>
+  `;
+  }).join('');
+}
+
+// ---------- PREVIEW (CLICK TO VIEW LARGER) ----------
+function openPreview(id){
+  const t = templates.find(x=>x.id===id);
+  if(!t) return;
+  document.getElementById('buyModalTitle').textContent = t.title;
+  document.getElementById('buyModalBody').innerHTML = `
+    <img src="${t.image}" style="width:100%; border-radius:10px; border:1px solid var(--line);">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
+      <span class="price" ${t.price===0?'style="color:#2F5C2F;"':''}>${t.price===0?'FREE':peso(t.price)}</span>
+      <span class="stars">${avgRating(t) ? starsHtml(avgRating(t)) : '☆☆☆☆☆'}</span>
+    </div>
+    <button class="submit-order-btn" onclick="openBuyModal('${t.id}')">${t.price===0?'Get Free Template':'Buy with GCash'}</button>
+  `;
+  document.getElementById('buyOverlay').classList.add('show');
+}
+
+// ---------- CUSTOMER RATING (buyers only, not admin) ----------
+function openRateWidget(id){
+  const t = templates.find(x=>x.id===id);
+  if(!t) return;
+  document.getElementById('buyModalTitle').textContent = 'Rate this Template';
+  document.getElementById('buyModalBody').innerHTML = `
+    <div class="buy-summary">
+      <img src="${t.image}">
+      <div><h4>${t.title}</h4></div>
+    </div>
+    <p style="font-size:12px; color:var(--muted); text-align:center;">Tap a star to rate — only customers who've tried this template should rate it.</p>
+    <div id="rateStars" style="display:flex; justify-content:center; gap:10px; font-size:34px; color:var(--gold); cursor:pointer;">
+      ${[1,2,3,4,5].map(n=>`<span onclick="submitRating('${id}', ${n})">☆</span>`).join('')}
+    </div>
+  `;
+  document.getElementById('buyOverlay').classList.add('show');
+}
+async function submitRating(id, stars){
+  const t = templates.find(x=>x.id===id);
+  if(!t) return;
+  if(!t.customerRatings) t.customerRatings = [];
+  t.customerRatings.push(stars);
+  await saveTemplates();
+  document.getElementById('buyModalBody').innerHTML = `
+    <div class="success-box">
+      <div class="check">✓</div>
+      <h4>Thanks for your rating!</h4>
+      <p>You rated this template ${stars} out of 5 stars.</p>
+    </div>
+  `;
+  renderAll();
+}
+
+// ---------- BUY FLOW ----------
+function openBuyModal(id){
+  const t = templates.find(x=>x.id===id);
+  if(!t) return;
+  const isFree = t.price === 0;
+  document.getElementById('buyModalTitle').textContent = isFree ? 'Get Free Template' : 'Buy Template';
+
+  const gcashSection = isFree ? '' : `
+    <div class="gcash-box">
+      <div class="gtitle">Scan to Pay via GCash</div>
+      ${gcashQrImage ? `<img src="${gcashQrImage}" style="width:180px; height:180px; border-radius:8px; margin:6px auto; display:block; object-fit:contain;">` : `<p style="font-size:11.5px; color:var(--muted); padding:14px;">QR code not yet set up by the seller.</p>`}
+      <p style="font-size:11px; color:var(--muted); margin-top:6px;">Open your GCash app → Scan QR → send the exact amount shown below.</p>
+    </div>`;
+
+  const proofField = isFree ? '' : `
+    <div class="field">
+      <label>Upload GCash Payment Screenshot</label>
+      <label class="file-field" for="proofImage">Tap to upload your GCash receipt screenshot</label>
+      <input type="file" id="proofImage" accept="image/*" style="display:none;">
+      <img class="img-preview" id="proofImgPreview" style="width:100%; height:auto; max-height:200px; object-fit:contain;">
+    </div>`;
+
+  document.getElementById('buyModalBody').innerHTML = `
+    <div class="buy-summary">
+      <img src="${t.image}">
+      <div>
+        <h4>${t.title}</h4>
+        <div class="price" ${isFree?'style="color:#2F5C2F;"':''}>${isFree?'FREE':peso(t.price)}</div>
+      </div>
+    </div>
+    ${gcashSection}
+    ${!isFree ? `<p class="order-err show" style="color:var(--plum);">⚠️ Please complete your GCash payment first — you'll get your template only after payment is verified.</p>` : ''}
+    <div class="field">
+      <label>Your Full Name</label>
+      <input type="text" id="buyerName" placeholder="Juan Dela Cruz">
+    </div>
+    ${proofField}
+    <div class="order-err" id="buyErr">Please fill in all fields before submitting.</div>
+    <button class="submit-order-btn" id="submitOrderBtn">${isFree ? 'Get My Free Template' : "I've Sent Payment — Submit"}</button>
+  `;
+  document.getElementById('buyOverlay').classList.add('show');
+
+  let proofImageData = null;
+  if(!isFree){
+    document.getElementById('proofImage').onchange = (e) => {
+      const file = e.target.files[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        proofImageData = ev.target.result;
+        const prev = document.getElementById('proofImgPreview');
+        prev.src = proofImageData;
+        prev.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    };
+  }
+
+  document.getElementById('submitOrderBtn').onclick = async () => {
+    const name = document.getElementById('buyerName').value.trim();
+    const err = document.getElementById('buyErr');
+    if(!name || (!isFree && !proofImageData)){
+      err.classList.add('show');
+      err.textContent = 'Please fill in all fields and upload your payment screenshot.';
+      return;
+    }
+    err.classList.remove('show');
+    const orderId = 'ORD-' + Date.now().toString().slice(-8);
+    const order = {
+      orderId, templateId: t.id, templateName: t.title, price: t.price,
+      buyerName: name, proofImage: proofImageData,
+      status: isFree ? 'approved' : 'pending', date: new Date().toLocaleString('en-PH')
+    };
+    orders.unshift(order);
+    if(isFree){
+      t.sold = (t.sold||0) + 1;
+      await saveTemplates();
+    }
+    await insertOrder(order);
+    if(!isFree){ subscribeBuyerToOrderUpdates(orderId); }
+    showSuccess(order, isFree ? t : null);
+  };
+}
+
+// ---------- BUYER NOTIFICATION OPT-IN (tagged by Order ID) ----------
+function subscribeBuyerToOrderUpdates(orderId){
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal){
+    try{
+      await OneSignal.Notifications.requestPermission();
+      await OneSignal.User.PushSubscription.optIn();
+      await OneSignal.User.addTag('order_id', orderId);
+    } catch(e){
+      console.warn('Buyer notification opt-in skipped:', e);
+    }
+  });
+}
+
+function editInstructionsHtml(templateId){
+  return `
+    <div style="background:var(--paper); border-radius:8px; padding:12px; border:1px solid var(--line); text-align:left; font-size:11.5px; line-height:1.7; color:var(--muted);">
+      <b style="color:var(--plum);">How to make this yours:</b><br>
+      1. Open the link and view the design in Canva<br>
+      2. Tap the <b>"•••"</b> menu (or File menu) → <b>"Make a copy"</b><br>
+      3. This creates YOUR OWN editable copy — change text, photos, colors freely<br>
+      4. No Canva Pro needed — this works on any free Canva account
+    </div>
+    <button class="submit-order-btn" style="margin-top:10px; background:var(--teal, var(--plum));" onclick="openEditorTool('${templateId}')">🎨 Or Edit Directly on This Site</button>
+  `;
+}
+
+function showSuccess(order, freeTemplate){
+  document.getElementById('buyModalTitle').textContent = freeTemplate ? 'Template Ready' : 'Order Submitted';
+  const body = freeTemplate ? `
+    <div class="success-box">
+      <div class="check">✓</div>
+      <h4>Thank you, ${order.buyerName}!</h4>
+      <a href="${freeTemplate.link}" target="_blank" class="order-ref" style="display:block; text-decoration:none; color:var(--plum); word-break:break-all;">${freeTemplate.link}</a>
+      ${editInstructionsHtml(freeTemplate.id)}
+      <div class="order-ref" style="margin-top:10px;">Save this Order ID: <b>${order.orderId}</b></div>
+    </div>
+  ` : `
+    <div class="success-box">
+      <div class="check">✓</div>
+      <h4>Thank you, ${order.buyerName}!</h4>
+      <p>Your order is pending verification. Once the seller confirms your GCash payment, come back and check your order status using your Order ID below.</p>
+      <p style="font-size:11px; margin-top:8px;">🔔 If your browser asked for notification permission, tap "Allow" — you'll get an alert on this device the moment your order is approved.</p>
+      <div class="order-ref" style="font-size:15px; font-weight:700;">${order.orderId}</div>
+      <p style="margin-top:10px; font-size:11px;">📌 Screenshot or write down this Order ID — you'll need it to check your status and get your template link.</p>
+    </div>
+  `;
+  document.getElementById('buyModalBody').innerHTML = body;
+}
+
+document.getElementById('closeBuy').onclick = () => {
+  document.getElementById('buyOverlay').classList.remove('show');
+};
+
+// ---------- ADMIN LOCK ----------
+// ---------- HIDDEN ADMIN ACCESS ----------
+// Access method 1: tap the logo 5 times quickly
+let logoTapCount = 0;
+let logoTapTimer = null;
+document.getElementById('logoTap').addEventListener('click', () => {
+  logoTapCount++;
+  clearTimeout(logoTapTimer);
+  logoTapTimer = setTimeout(() => { logoTapCount = 0; }, 2000);
+  if(logoTapCount >= 5){
+    logoTapCount = 0;
+    openAdminLock();
+  }
+});
+
+// Access method 2: secret bookmarkable link — add ?seller=1 to your site URL
+if(new URLSearchParams(window.location.search).get('seller') === '1'){
+  openAdminLock();
+}
+
+function openAdminLock(){
+  document.getElementById('adminOverlay').classList.add('show');
+  document.getElementById('adminPass').value = '';
+  document.getElementById('adminPass').focus();
+}
+document.getElementById('adminCancel').onclick = () => {
+  document.getElementById('adminOverlay').classList.remove('show');
+};
+document.getElementById('adminUnlock').onclick = () => {
+  if(document.getElementById('adminPass').value === ADMIN_PASSCODE){
+    document.getElementById('adminOverlay').classList.remove('show');
+    document.getElementById('adminPanel').classList.add('show');
+    document.getElementById('firebaseWarning').style.display = dbReady ? 'none' : 'block';
+    document.getElementById('dbErrorDetail').textContent = dbSetupError ? ('Error: ' + dbSetupError) : '';
+    updateAutoId();
+  } else {
+    document.getElementById('adminPass').style.borderColor = '#E4664A';
+    document.getElementById('adminPass').value = '';
+  }
+};
+document.getElementById('closeAdmin').onclick = () => {
+  document.getElementById('adminPanel').classList.remove('show');
+};
+
+// ---------- ADMIN TABS ----------
+document.querySelectorAll('.admin-tab').forEach(tab=>{
+  tab.onclick = () => {
+    document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.admin-section').forEach(s=>s.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+    if(tab.dataset.tab === 'payment' && gcashQrImage){
+      const prev = document.getElementById('qrImgPreview');
+      prev.src = gcashQrImage;
+      prev.style.display = 'block';
+    }
+  };
+});
+
+// ---------- UPLOAD FORM ----------
+function updateAutoId(){
+  const next = templates.length + 1;
+  document.getElementById('autoIdPreview').textContent = 'UT-' + String(next).padStart(3,'0');
+}
+
+document.getElementById('newPricingType').onchange = (e) => {
+  const wrap = document.getElementById('priceFieldWrap');
+  if(e.target.value === 'free'){
+    wrap.style.display = 'none';
+    document.getElementById('newPrice').value = '0';
+  } else {
+    wrap.style.display = 'block';
+    document.getElementById('newPrice').value = '';
+  }
+};
+
+let newImageData = null;
+document.getElementById('newImage').onchange = (e) => {
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    newImageData = ev.target.result;
+    const prev = document.getElementById('imgPreview');
+    prev.src = newImageData;
+    prev.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+};
+
+document.getElementById('addTemplateBtn').onclick = async () => {
+  const title = document.getElementById('newTitle').value.trim();
+  const category = document.getElementById('newCategory').value;
+  const pricingType = document.getElementById('newPricingType').value;
+  const price = pricingType === 'free' ? 0 : document.getElementById('newPrice').value;
+  const link = document.getElementById('newLink').value.trim();
+
+  if(!title || price === '' || price === null || !link || !newImageData){
+    alert('Please complete all fields and upload a preview image.');
+    return;
+  }
+
+  const id = 'UT-' + String(templates.length + 1).padStart(3,'0');
+  const template = {
+    id, title, category, price:Number(price),
+    customerRatings:[], image:newImageData, link, sold:0, dateAdded:new Date().toLocaleString('en-PH')
+  };
+  templates.push(template);
+  await saveTemplates();
+
+  document.getElementById('newTitle').value = '';
+  document.getElementById('newPrice').value = '';
+  document.getElementById('newLink').value = '';
+  document.getElementById('imgPreview').style.display = 'none';
+  newImageData = null;
+  updateAutoId();
+  renderAll();
+  alert('✅ "' + title + '" is now live on your shop! Customers can see it and start ordering.');
+};
+
+// ---------- MANAGE LIST ----------
+function renderManageList(){
+  const el = document.getElementById('manageList');
+  if(templates.length === 0){
+    el.innerHTML = `<div class="empty-admin">You haven't uploaded any templates yet.</div>`;
+    return;
+  }
+  el.innerHTML = templates.map(t => `
+    <div class="admin-item">
+      <img src="${t.image}">
+      <div class="admin-item-info">
+        <h5>${t.id} — ${t.title}</h5>
+        <span>${peso(t.price)} · ${t.sold||0} sold · ${avgRating(t) ? avgRating(t).toFixed(1)+'★ ('+t.customerRatings.length+')' : 'No ratings yet'}</span>
+      </div>
+      <button class="del-btn" onclick="deleteTemplate('${t.id}')">Remove</button>
+    </div>
+  `).join('');
+}
+async function deleteTemplate(id){
+  if(!confirm('Remove this template from your shop?')) return;
+  templates = templates.filter(t=>t.id!==id);
+  await saveTemplates();
+  renderAll();
+}
+
+// ---------- ORDERS ----------
+function renderOrdersList(){
+  const el = document.getElementById('ordersList');
+  if(orders.length === 0){
+    el.innerHTML = `<div class="empty-admin">No orders yet.</div>`;
+    return;
+  }
+  el.innerHTML = orders.map(o => `
+    <div class="order-card">
+      <div class="oc-top">
+        <span class="oc-id">${o.orderId}</span>
+        <span class="order-status ${o.status}">${o.status}</span>
+      </div>
+      <p><b>${o.templateName}</b> — ${peso(o.price)}</p>
+      <p>Buyer: ${o.buyerName}</p>
+      ${o.proofImage ? `<img src="${o.proofImage}" style="width:100%; max-width:220px; border-radius:8px; margin:6px 0; border:1px solid var(--line); cursor:pointer;" onclick="window.open(this.src)">` : ''}
+      <p>${o.date}</p>
+      ${o.status==='pending' ? `
+        <div class="oc-actions">
+          <button class="oc-btn approve" onclick="approveOrder('${o.orderId}')">Verify & Approve</button>
+        </div>
+      ` : `
+        <div class="oc-actions">
+          <button class="oc-btn link" onclick="copyDeliveryLink('${o.templateId}')">Copy Template Link to Send</button>
+        </div>
+      `}
+    </div>
+  `).join('');
+}
+
+async function approveOrder(orderId){
+  const order = orders.find(o=>o.orderId===orderId);
+  if(!order) return;
+  order.status = 'approved';
+  const t = templates.find(x=>x.id===order.templateId);
+  if(t){ t.sold = (t.sold||0) + 1; }
+  await updateOrderStatus(orderId, 'approved');
+  await saveTemplates();
+  renderAll();
+  alert('Order approved! The buyer can now check their order status on the site using Order ID ' + order.orderId + ' to get their template link.');
+}
+
+function copyDeliveryLink(templateId){
+  const t = templates.find(x=>x.id===templateId);
+  if(!t) return;
+  navigator.clipboard.writeText(t.link).then(()=>{
+    alert('Link copied! Paste it into an email or message to the buyer.');
+  });
+}
+
+// ---------- GCASH QR UPLOAD ----------
+let newQrData = null;
+document.getElementById('qrImage').onchange = (e) => {
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    newQrData = ev.target.result;
+    const prev = document.getElementById('qrImgPreview');
+    prev.src = newQrData;
+    prev.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+};
+document.getElementById('saveQrBtn').onclick = async () => {
+  if(!newQrData && !gcashQrImage){
+    alert('Please upload your GCash QR code image first.');
+    return;
+  }
+  if(!dbReady){
+    alert('⚠️ Supabase is not set up yet. Please finish the Supabase setup first so this can be saved permanently.');
+    return;
+  }
+  if(newQrData){
+    gcashQrImage = newQrData;
+    await sb.from('shop_data').upsert({ key:'settings', value: { gcashQr: gcashQrImage } });
+  }
+  alert('✅ Your GCash QR code is saved! Customers will now see it when they buy.');
+};
+
+// ---------- CHECK ORDER STATUS ----------
+function openCheckOrder(){
+  document.getElementById('buyModalTitle').textContent = 'Check My Order';
+  document.getElementById('buyModalBody').innerHTML = `
+    <div class="field">
+      <label>Order ID</label>
+      <input type="text" id="checkOrderId" placeholder="e.g. ORD-12345678">
+    </div>
+    <div class="order-err" id="checkOrderErr">Order not found. Please check your Order ID.</div>
+    <button class="submit-order-btn" id="checkOrderBtn">Check Status</button>
+  `;
+  document.getElementById('buyOverlay').classList.add('show');
+  document.getElementById('checkOrderBtn').onclick = () => {
+    const idVal = document.getElementById('checkOrderId').value.trim().toUpperCase();
+    const order = orders.find(o => o.orderId.toUpperCase() === idVal);
+    const err = document.getElementById('checkOrderErr');
+    if(!order){
+      err.classList.add('show');
+      return;
+    }
+    err.classList.remove('show');
+    const t = templates.find(x => x.id === order.templateId);
+    if(order.status === 'approved' && t){
+      showSuccess(order, t);
+    } else {
+      document.getElementById('buyModalBody').innerHTML = `
+        <div class="success-box">
+          <div class="check" style="background:#FCE9C6; color:#8A6416;">⏳</div>
+          <h4>Still Pending</h4>
+          <p>Your GCash payment for <b>${order.templateName}</b> hasn't been verified yet. Please check back later, or contact the seller directly.</p>
+          <div class="order-ref">${order.orderId}</div>
+        </div>
+      `;
+    }
+  };
+}
+
+// ---------- MINI TEMPLATE EDITOR ----------
+let editorLayers = [];
+let editorSelectedIdx = null;
+let editorCanvas, editorCtx, editorBgImage;
+
+function openEditorTool(templateId){
+  const t = templates.find(x => x.id === templateId);
+  if(!t) return;
+  editorLayers = [];
+  editorSelectedIdx = null;
+  document.getElementById('buyModalTitle').textContent = 'Edit: ' + t.title;
+  document.getElementById('buyModalBody').innerHTML = `
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <button class="oc-btn link" onclick="editorAddText()">+ Add Text</button>
+      <label class="oc-btn link" style="text-align:center;">+ Add Image
+        <input type="file" accept="image/*" style="display:none;" onchange="editorAddImage(event)">
+      </label>
+      <button class="oc-btn link" onclick="editorDeleteSelected()">🗑 Delete Selected</button>
+    </div>
+    <canvas id="editorCanvas" style="width:100%; border-radius:8px; border:1px solid var(--line); margin-top:8px; touch-action:none;"></canvas>
+    <p style="font-size:10.5px; color:var(--muted); text-align:center;">Tap a layer to select it, drag to move. Tap "Add Text" to type your own words.</p>
+    <button class="submit-order-btn" onclick="editorDownload()">⬇ Download My Design</button>
+  `;
+  document.getElementById('buyOverlay').classList.add('show');
+
+  editorCanvas = document.getElementById('editorCanvas');
+  editorCtx = editorCanvas.getContext('2d');
+  editorBgImage = new Image();
+  editorBgImage.crossOrigin = 'anonymous';
+  editorBgImage.onload = () => {
+    editorCanvas.width = editorBgImage.width;
+    editorCanvas.height = editorBgImage.height;
+    editorRedraw();
+  };
+  editorBgImage.src = t.image;
+
+  editorCanvas.onpointerdown = editorPointerDown;
+  editorCanvas.onpointermove = editorPointerMove;
+  editorCanvas.onpointerup = () => { editorDragging = false; };
+}
+
+function editorRedraw(){
+  if(!editorCtx || !editorBgImage) return;
+  editorCtx.clearRect(0,0,editorCanvas.width, editorCanvas.height);
+  editorCtx.drawImage(editorBgImage, 0, 0, editorCanvas.width, editorCanvas.height);
+  editorLayers.forEach((layer, i) => {
+    if(layer.type === 'text'){
+      editorCtx.font = layer.fontSize + 'px sans-serif';
+      editorCtx.fillStyle = layer.color;
+      editorCtx.fillText(layer.text, layer.x, layer.y);
+    } else if(layer.type === 'image' && layer.img){
+      editorCtx.drawImage(layer.img, layer.x, layer.y, layer.w, layer.h);
+    }
+    if(i === editorSelectedIdx){
+      editorCtx.strokeStyle = '#E4664A';
+      editorCtx.lineWidth = 2;
+      const b = editorLayerBounds(layer);
+      editorCtx.strokeRect(b.x, b.y, b.w, b.h);
+    }
+  });
+}
+
+function editorLayerBounds(layer){
+  if(layer.type === 'text'){
+    editorCtx.font = layer.fontSize + 'px sans-serif';
+    const w = editorCtx.measureText(layer.text).width;
+    return { x: layer.x, y: layer.y - layer.fontSize, w: w, h: layer.fontSize * 1.3 };
+  }
+  return { x: layer.x, y: layer.y, w: layer.w, h: layer.h };
+}
+
+function editorAddText(){
+  const text = prompt('Type your text:');
+  if(!text) return;
+  editorLayers.push({ type:'text', text, x: editorCanvas.width/2 - 40, y: editorCanvas.height/2, fontSize: Math.round(editorCanvas.width/18), color:'#1B3A3F' });
+  editorSelectedIdx = editorLayers.length - 1;
+  editorRedraw();
+}
+
+function editorAddImage(event){
+  const file = event.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    const img = new Image();
+    img.onload = () => {
+      const w = editorCanvas.width * 0.3;
+      const h = w * (img.height/img.width);
+      editorLayers.push({ type:'image', img, x: editorCanvas.width/2 - w/2, y: editorCanvas.height/2 - h/2, w, h });
+      editorSelectedIdx = editorLayers.length - 1;
+      editorRedraw();
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function editorDeleteSelected(){
+  if(editorSelectedIdx === null) return;
+  editorLayers.splice(editorSelectedIdx, 1);
+  editorSelectedIdx = null;
+  editorRedraw();
+}
+
+let editorDragging = false;
+let editorDragOffset = {x:0, y:0};
+
+function editorGetCanvasPos(e){
+  const rect = editorCanvas.getBoundingClientRect();
+  const scaleX = editorCanvas.width / rect.width;
+  const scaleY = editorCanvas.height / rect.height;
+  return { x: (e.clientX - rect.left) * scaleX, y: (e.clientY - rect.top) * scaleY };
+}
+
+function editorPointerDown(e){
+  const pos = editorGetCanvasPos(e);
+  for(let i = editorLayers.length - 1; i >= 0; i--){
+    const b = editorLayerBounds(editorLayers[i]);
+    if(pos.x >= b.x && pos.x <= b.x + b.w && pos.y >= b.y && pos.y <= b.y + b.h){
+      editorSelectedIdx = i;
+      editorDragging = true;
+      editorDragOffset = { x: pos.x - editorLayers[i].x, y: pos.y - editorLayers[i].y };
+      editorRedraw();
+      return;
+    }
+  }
+  editorSelectedIdx = null;
+  editorRedraw();
+}
+
+function editorPointerMove(e){
+  if(!editorDragging || editorSelectedIdx === null) return;
+  const pos = editorGetCanvasPos(e);
+  editorLayers[editorSelectedIdx].x = pos.x - editorDragOffset.x;
+  editorLayers[editorSelectedIdx].y = pos.y - editorDragOffset.y;
+  editorRedraw();
+}
+
+function editorDownload(){
+  editorSelectedIdx = null;
+  editorRedraw();
+  const link = document.createElement('a');
+  link.download = 'my-design.png';
+  link.href = editorCanvas.toDataURL('image/png');
+  link.click();
+}
+
+// ---------- ENABLE PUSH NOTIFICATIONS (Admin only) ----------
+document.getElementById('enableNotifBtn').onclick = () => {
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal){
+    try{
+      await OneSignal.Notifications.requestPermission();
+      await OneSignal.User.PushSubscription.optIn();
+      alert('✅ Notifications enabled! You will now get an alert on this phone/browser when a new order comes in — as long as OneSignal is fully connected (App ID configured).');
+    } catch(e){
+      alert('⚠️ Could not enable notifications: ' + (e.message || e));
+    }
+  });
+};
+
+loadData();
+</script>
+</body>
+</html>
